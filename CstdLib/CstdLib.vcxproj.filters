@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\memory">
+      <UniqueIdentifier>{1582E16A-013A-23B8-6A41-FC135618BEA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\string">
+      <UniqueIdentifier>{3389F279-1F41-34C7-8848-0D23741FCFB7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\CstdLib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\string.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\memory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\memoryTests.h" />
+    <ClInclude Include="tests\stringTests.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\memory\memory.c">
+      <Filter>src\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\string\String.c">
+      <Filter>src\string</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\MainTests.c" />
+    <ClCompile Include="include\types.h" />
+  </ItemGroup>
+</Project>
