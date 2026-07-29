@@ -107,9 +107,10 @@
     <ClInclude Include="tests\stringTests.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="include\ctype.h" />
     <ClCompile Include="include\types.h" />
     <ClCompile Include="src\memory\memory.c" />
-    <ClCompile Include="src\string\String.c" />
+    <ClCompile Include="src\string\string.c" />
     <ClCompile Include="tests\MainTests.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

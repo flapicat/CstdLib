@@ -34,10 +34,13 @@
     <ClCompile Include="src\memory\memory.c">
       <Filter>src\memory</Filter>
     </ClCompile>
-    <ClCompile Include="src\string\String.c">
+    <ClCompile Include="src\string\string.c">
       <Filter>src\string</Filter>
     </ClCompile>
     <ClCompile Include="tests\MainTests.c" />
     <ClCompile Include="include\types.h" />
+    <ClCompile Include="include\ctype.h">
+      <Filter>include</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

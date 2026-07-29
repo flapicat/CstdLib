@@ -1,3 +1,5 @@
 #include "core.h"
+#include "ctype.h"
 #include "memory.h"
 #include "string.h"
+#include "types.h"

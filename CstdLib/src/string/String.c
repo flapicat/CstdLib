@@ -1,5 +1,8 @@
-#include "String.h"
+#include "string.h"
 #include "core.h"
+#include "types.h"
+
+#include <stdio.h>
 
 unsigned int str_length(const char* string)
 {
@@ -90,5 +93,78 @@ char* str_find(const char* str1, const char* str2)
 	}
 
 	return NULL;
+}
+
+char* str_chr(const char* str, int ch)
+{
+	if (str == NULL) {
+		return NULL;
+	}
+
+	for (size_t i = 0; ; i++)
+	{
+		if (str[i] == (char)ch)
+			return (char*)&str[i];
+
+		if (str[i] == '\0')
+			break;
+	}
+
+	return NULL;
+}
+
+char* str_rchr(const char* str, int ch)
+{
+	if (str == NULL) {
+		return NULL;
+	}
+
+	char* ptr = NULL;
+	for (size_t i = 0; ; i++)
+	{
+		if (str[i] == (char)ch)
+			ptr = (char*)&str[i];
+
+		if (str[i] == '\0')
+			break;
+	}
+
+	return ptr;
+}
+
+int str_ncmp(const char* str1, const char* str2, size_t count)
+{
+	if (str1 == NULL || str2 == NULL) {
+		return -1;
+	}
+
+	for (size_t i = 0; i < count; i++)	{
+		if (str1[i] != str2[i] || str1[i] == '\0' || str2[i] == '\0') {
+			return (unsigned char)str1[i] - (unsigned char)str2[i];
+		}
+	}
+
+	return 0;
+}
+
+int str_to_int(const char* str)
+{
+	if (str == NULL)
+		return 0;
+
+	int sign = 1;
+	int result = 0;
+
+	if (*str == '-'){
+		sign = -1;
+		str++;
+	}
+
+	while (*str >= '0' && *str <= '9'){
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+
+	return result * sign;
 }
 
